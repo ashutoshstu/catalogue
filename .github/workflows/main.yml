@@ -68,6 +68,8 @@ jobs:
           #tag_with_ref: true
           #tag_with_sha: true
           push: true
+          tags: |
+            abhishek138/catalogue:latest
 
       - name: Push catalogue-db to Docker Hub
         uses: docker/build-push-action@v1
@@ -81,3 +83,5 @@ jobs:
           #tag_with_ref: true
           #tag_with_sha: true
           push: true
+          tags: |
+            abhishek138/cataloguedb:latest

@@ -50,10 +50,10 @@ jobs:
      # - name: Test Docker Image
      #   run: ./test/test.sh container.py
 
-      - name: Submit Coveralls
-        env:
-          COVERALLS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: goveralls -coverprofile=coverage.out -service=github
+     # - name: Submit Coveralls
+      #  env:
+       #   COVERALLS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #run: goveralls -coverprofile=coverage.out -service=github
 
       # Push to dockerhub
       - name: Push catalogue to Docker Hub

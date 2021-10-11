@@ -64,9 +64,10 @@ jobs:
           password: abhishek138
           dockerfile: go/src/github.com/microservices-demo/catalogue/docker/catalogue/Dockerfile
           path: go/src/github.com/microservices-demo/catalogue
-          repository: ${{ env.GROUP }}/${{ env.REPO }}
-          tag_with_ref: true
-          tag_with_sha: true
+          #repository: ${{ env.GROUP }}/${{ env.REPO }}
+          #tag_with_ref: true
+          #tag_with_sha: true
+          push: true
 
       - name: Push catalogue-db to Docker Hub
         uses: docker/build-push-action@v1
@@ -76,6 +77,7 @@ jobs:
           password: abhishek138
           dockerfile: go/src/github.com/microservices-demo/catalogue/docker/catalogue-db/Dockerfile
           path: go/src/github.com/microservices-demo/catalogue/docker/catalogue-db
-          repository: ${{ env.GROUP }}/${{ env.REPO }}
-          tag_with_ref: true
-          tag_with_sha: true
+          #repository: ${{ env.GROUP }}/${{ env.REPO }}
+          #tag_with_ref: true
+          #tag_with_sha: true
+          push: true

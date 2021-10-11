@@ -60,8 +60,8 @@ jobs:
         uses: docker/build-push-action@v1
         if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/master'
         with:
-          username: ${{ secrets.DOCKER_USER }}
-          password: ${{ secrets.DOCKER_PASS }}
+          username: abhishek138
+          password: abhishek138
           dockerfile: go/src/github.com/microservices-demo/catalogue/docker/catalogue/Dockerfile
           path: go/src/github.com/microservices-demo/catalogue
           repository: ${{ env.GROUP }}/${{ env.REPO }}

@@ -40,7 +40,11 @@ jobs:
 
       - name: Install dependencies
         run: go get -u github.com/FiloSottile/gvt && gvt restore && go get -v github.com/mattn/goveralls
-
+        
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
       - name: Build
         run: ./scripts/build.sh
 

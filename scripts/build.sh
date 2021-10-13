@@ -39,7 +39,7 @@ cp $CODE_DIR/vendor/manifest $BUILD_DIR/docker/catalogue/vendor/
 REPO=${GROUP}/$(basename catalogue);
 
 $DOCKER_CMD build \
- --push --build-arg BUILD_VERSION=$BUILD_VERSION \
+  --build-arg BUILD_VERSION=$BUILD_VERSION \
   --build-arg BUILD_DATE=$BUILD_DATE \
   --build-arg COMMIT=$COMMIT \
   -t ${REPO}:${COMMIT} \

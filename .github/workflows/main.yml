@@ -55,7 +55,7 @@ jobs:
         run: docker login -u abhishek138 -p ${{ secrets.DOCKER_TOKEN }}
       - name: build and publish image
         id: docker_build
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v1
         with:
           context: .
           file: ./docker/catalogue/Dockerfile
